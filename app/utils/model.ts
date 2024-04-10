@@ -64,6 +64,7 @@ export function collectModels(
 ) {
   const modelTable = collectModelTable(models, customModels);
   const allModels = Object.values(modelTable);
+  allModels.sort((a, b) => b.displayName.localeCompare(a.displayName));
 
   return allModels;
 }
